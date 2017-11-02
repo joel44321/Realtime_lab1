@@ -47,3 +47,7 @@ Temporary Items
 .apdisk
 
 freertos/Objects
+gcc/*.o
+gcc/*.d
+gcc/*.elf
+gcc/blinky.map
