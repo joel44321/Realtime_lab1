@@ -29,37 +29,22 @@
  */
 
 /**
- * @file    blinky.c
- * @brief   Application entry point.
+ * @file    clock_config.h
+ * @brief   Board clocks header file.
  */
-#include <stdio.h>
-#include "board.h"
-#include "fsl_gpio.h"
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
-#include "pin_mux.h"
-#include "clock_config.h"
-#include "MKW41Z4.h"
+#ifndef _CLOCK_CONFIG_H_
+#define _CLOCK_CONFIG_H_
 
-int main(void) {
 
-	/*gpio_pin_config_t led_config = {
-	        kGPIO_DigitalOutput, 0,
-	};*/
+/**
+ * @brief 	Initialize board clocks.
+ */
+void BOARD_InitBootClocks(void);
 
-  	/* Init board hardware. */
-    BOARD_InitBootPins();
-    //BOARD_InitBootClocks();
-    BOARD_BootClockRUN();
-  	/* Init FSL debug console. */
-    //BOARD_InitDebugConsole();
 
-    //GPIO_PinInit(BOARD_LED_BLUE_GPIO, BOARD_LED_BLUE_GPIO_PIN, &led_config);
+#endif /* _CLOCK_CONFIG_H_ */
 
-    LED_BLUE_INIT(1);
-    LED_BLUE_ON();
 
-   // GPIO_ClearPinsOutput(BOARD_LED_RED_GPIO, 1u << BOARD_LED_RED_GPIO_PIN);
-
-    for (;;){}
-    return 0 ;
-}

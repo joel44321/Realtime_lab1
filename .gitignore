@@ -51,3 +51,13 @@ gcc/*.o
 gcc/*.d
 gcc/*.elf
 gcc/blinky.map
+gcc/keil
+*.o
+gcc/xpresso/drivers/*.o
+gcc/xpresso/startup/*.o
+gcc/xpresso/source/*.o
+gcc/xpresso/CMSIS/*.o
+gcc/xpresso/utilities/*.o
+gcc/xpresso/freertos/*.o
+
+

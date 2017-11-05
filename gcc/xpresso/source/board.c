@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2015, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright (c) 2016, NXP Semiconductor, Inc.
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  *   list of conditions and the following disclaimer in the documentation and/or
  *   other materials provided with the distribution.
  *
- * o Neither the name of the copyright holder nor the names of its
+ * o Neither the name of NXP Semiconductor, Inc. nor the names of its
  *   contributors may be used to endorse or promote products derived from this
  *   software without specific prior written permission.
  *
@@ -28,56 +28,19 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef _PIN_MUX_H_
-#define _PIN_MUX_H_
-
-
-/*******************************************************************************
- * Definitions
- ******************************************************************************/
-
-/*! @brief Direction type  */
-typedef enum _pin_mux_direction
-{
-  kPIN_MUX_DirectionInput = 0U,         /* Input direction */
-  kPIN_MUX_DirectionOutput = 1U,        /* Output direction */
-  kPIN_MUX_DirectionInputOrOutput = 2U  /* Input or output direction */
-} pin_mux_direction_t;
-
-/*!
- * @addtogroup pin_mux
- * @{
+/**
+ * @file    board.c
+ * @brief   Board initialization file.
  */
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
-/*******************************************************************************
- * API
- ******************************************************************************/
+#include <stdint.h>
+#include "board.h"
 
-#if defined(__cplusplus)
-extern "C" {
-#endif
-
-/*!
- * @brief Configures pin routing and optionally pin electrical features.
- *
+/**
+ * @brief Set up and initialize all required blocks and functions related to the board hardware.
  */
-void BOARD_InitPins(void);
-
-/*!
- * @brief Calls initialization functions.
- *
- */
-void BOARD_InitBootPins(void);
-
-#if defined(__cplusplus)
+void BOARD_InitDebugConsole(void) {
+	/* The user initialization should be placed here */
 }
-#endif
-
-/*!
- * @}
- */
-#endif /* _PIN_MUX_H_ */
-
-/*******************************************************************************
- * EOF
- ******************************************************************************/

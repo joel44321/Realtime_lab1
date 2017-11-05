@@ -1,7 +1,9 @@
 all:
 	#arm-none-eabi-gcc -mcpu=cortex-m0plus --specs=nosys.specs -o main.o -c main.c
 	#arm-none-eabi-gcc -mcpu=cortex-m0plus --specs=nosys.specs -o startup_mkw41z4.o -c startup_mkw41z4.c
-	
+	arm-none-eabi-gcc -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -MMD -MP -MF fsl_debug_console.d -MT fsl_debug_console.o -MT fsl_debug_console.d -o fsl_debug_console.o fsl_debug_console.c
+
+
 	#Xpresso examples
 	arm-none-eabi-gcc -D__REDLIB__ -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__GNUC__ -D__USE_CMSIS -DDEBUG -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DCPU_MKW41Z512CAT4 -DCPU_MKW41Z512CAT4_cm0plus -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -MMD -MP -MF fsl_debug_console.d -MT fsl_debug_console.o -MT fsl_debug_console.d -o fsl_debug_console.o fsl_debug_console.c
 	arm-none-eabi-gcc -D__REDLIB__ -DCR_INTEGER_PRINTF -DSDK_DEBUGCONSOLE=0 -D__GNUC__ -D__USE_CMSIS -DDEBUG -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DCPU_MKW41Z512CAT4 -DCPU_MKW41Z512CAT4_cm0plus -O0 -fno-common -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m0plus -mthumb -MMD -MP -MF startup_mkw41z4.d -MT startup_mkw41z4.o -MT startup_mkw41z4.d -o startup_mkw41z4.o startup_mkw41z4.c

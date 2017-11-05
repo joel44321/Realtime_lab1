@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2015, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright (c) 2016, NXP Semiconductor, Inc.
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  *   list of conditions and the following disclaimer in the documentation and/or
  *   other materials provided with the distribution.
  *
- * o Neither the name of the copyright holder nor the names of its
+ * o Neither the name of NXP Semiconductor, Inc. nor the names of its
  *   contributors may be used to endorse or promote products derived from this
  *   software without specific prior written permission.
  *
@@ -27,48 +27,19 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-#ifndef _CLOCK_CONFIG_H_
-#define _CLOCK_CONFIG_H_
 
-/*******************************************************************************
- * DEFINITION
- ******************************************************************************/
-#define BOARD_XTAL0_CLK_HZ 32000000U
-#define BOARD_XTAL32K_CLK_HZ 32768U
-
-/*******************************************************************************
- * API
- ******************************************************************************/
-
-/*******************************************************************************
- ************************ BOARD_InitBootClocks function ************************
- ******************************************************************************/
-
-#if defined(__cplusplus)
-extern "C" {
-#endif /* __cplusplus*/
-
-/*!
- * @brief This function executes default configuration of clocks.
- *
+/**
+ * @file    pin_mux.c
+ * @brief   Board pins file.
  */
-void BOARD_InitBootClocks(void);
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
 
-#if defined(__cplusplus)
+#include "pin_mux.h"
+
+/**
+ * @brief Set up and initialize all required blocks and functions related to the board hardware.
+ */
+void BOARD_InitBootPins(void) {
+	/* The user initialization should be placed here */
 }
-#endif /* __cplusplus*/
-
-#if defined(__cplusplus)
-extern "C" {
-#endif /* __cplusplus*/
-
-void BOARD_InitOsc0(void);
-void BOARD_BootClockVLPR(void);
-void BOARD_BootClockRUN(void);
-void BOARD_RfOscInit(void);
-
-#if defined(__cplusplus)
-}
-#endif /* __cplusplus*/
-
-#endif /* _CLOCK_CONFIG_H_ */

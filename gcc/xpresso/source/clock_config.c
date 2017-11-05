@@ -1,6 +1,6 @@
 /*
- * Copyright (c) 2015, Freescale Semiconductor, Inc.
- * Copyright 2016-2017 NXP
+ * Copyright (c) 2016, NXP Semiconductor, Inc.
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
@@ -12,7 +12,7 @@
  *   list of conditions and the following disclaimer in the documentation and/or
  *   other materials provided with the distribution.
  *
- * o Neither the name of the copyright holder nor the names of its
+ * o Neither the name of NXP Semiconductor, Inc. nor the names of its
  *   contributors may be used to endorse or promote products derived from this
  *   software without specific prior written permission.
  *
@@ -28,33 +28,22 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <stdint.h>
-#include "fsl_common.h"
+/**
+ * @file    clock_config.c
+ * @brief   Board clocks initialization file.
+ */
+ 
+/* This is a template for board specific configuration created by MCUXpresso IDE Project Wizard.*/
+
+#include "MKW41Z4.h"
 #include "clock_config.h"
-#include "board.h"
-#include "fsl_debug_console.h"
 
-/*******************************************************************************
- * Variables
- ******************************************************************************/
+/**
+ * @brief Set up and initialize all required blocks and functions related to the board hardware.
+ */
+void BOARD_InitBootClocks(void) {
+	/* The user initialization should be placed here */
 
-/*******************************************************************************
- * Code
- ******************************************************************************/
-/* Initialize debug console. */
-void BOARD_InitDebugConsole(void)
-{
-    uint32_t uartClkSrcFreq;
-
-    /* SIM_SOPT2[27:26]:
-     *  00: Clock Disabled
-     *  01: MCGFLLCLK
-     *  10: OSCERCLK
-     *  11: MCGIRCCLK
-     */
-    CLOCK_SetLpuartClock(2);
-
-    uartClkSrcFreq = BOARD_DEBUG_UART_CLK_FREQ;
-
-    DbgConsole_Init(BOARD_DEBUG_UART_BASEADDR, BOARD_DEBUG_UART_BAUDRATE, BOARD_DEBUG_UART_TYPE, uartClkSrcFreq);
+	/* Read core clock setting. */
+	SystemCoreClockUpdate();
 }
