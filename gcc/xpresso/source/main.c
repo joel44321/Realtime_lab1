@@ -109,9 +109,9 @@ static void slow_led(void *pvParameters)
 	for (;;)
 	{
 		LED_On(3);
-		vTaskDelay(1000/portTICK_PERIOD_MS);
+		vTaskDelay(2000/portTICK_PERIOD_MS);
 		LED_Off(3);
-		vTaskDelay(1000/portTICK_PERIOD_MS);
+		vTaskDelay(2000/portTICK_PERIOD_MS);
 	}
 }
 

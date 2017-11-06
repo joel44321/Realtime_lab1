@@ -59,5 +59,15 @@ gcc/xpresso/source/*.o
 gcc/xpresso/CMSIS/*.o
 gcc/xpresso/utilities/*.o
 gcc/xpresso/freertos/*.o
+gcc/xpresso/Debug/XpressoRTOS.axf
+gcc/xpresso/Debug/XpressoRTOS.bin
 
-
+xpresso/XpressoRTOS/Debug/*.axf
+xpresso/XpressoRTOS/Debug/CMSIS/*.o
+xpresso/XpressoRTOS/Debug/drivers/*.o
+xpresso/XpressoRTOS/Debug/freertos/*.o
+xpresso/XpressoRTOS/Debug/source/*.o
+xpresso/XpressoRTOS/Debug/startup/*.o
+xpresso/XpressoRTOS/Debug/utilities/*.o
+*.o
+xpresso/XpressoRTOS/Debug/drivers/fsl_lpuart_freertos.o
