@@ -70,4 +70,3 @@ xpresso/XpressoRTOS/Debug/source/*.o
 xpresso/XpressoRTOS/Debug/startup/*.o
 xpresso/XpressoRTOS/Debug/utilities/*.o
 *.o
-xpresso/XpressoRTOS/Debug/drivers/fsl_lpuart_freertos.o
